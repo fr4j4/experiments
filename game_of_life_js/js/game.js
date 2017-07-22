@@ -189,13 +189,13 @@ function neighbours_count(row,col){
 function judge(cell){//apply rules to judge if a cell is alive or dead
 	n=cell.neighbours;
 	if(cell.alive){
-		if(n<2 || n > 4){
+		if(n<2 || n > 3){
 			cell.next=false;
 		}else{
 			cell.next=true;
 		}
 	}else{
-		if(n>=2 && n<=3){
+		if(n===3){
 			cell.next=true;
 		}
 	}
