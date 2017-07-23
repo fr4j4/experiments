@@ -1,0 +1,93 @@
+html{
+	background-color: black;
+}
+body{
+	background-color: #28097A;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.terminal{
+	position: absolute;
+	border: black solid 4px;
+	border-top-left-radius:15px;
+	border-top-right-radius:15px;
+	margin: 2em;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.terminal > .title{
+	
+	background-color: #000000;
+	color: white;
+	text-align: center;
+}
+
+.terminal > .tabs{
+	background-color: darkgray;
+	//border:solid 1px green;
+	max-height: 30px;
+	min-height: 30px;
+}
+
+.terminal >.tabs >.tab{
+	margin: 2px;
+	padding: 4px;
+	background-color: black;
+	color: white;
+	display: inline-block;
+
+}
+
+.terminal >.tabs >.tab >.close_tab{
+	cursor: pointer;
+}
+
+.terminal > .content > .text > p{
+	margin: 0.0625em;
+}
+
+.terminal > .content{
+	overflow-y: auto;
+	position: absolute;
+	background-color: black;
+	border: solid 2px darkgray;
+	padding: 0.5em;
+	color: #00ff00;
+	top: 48px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color:#000000;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 0px;
+    background-color:#000000;
+}
+ 
+::-webkit-scrollbar-thumb {
+    //border-radius: 10px;
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color:black;
+    border: 2px solid #008F00;
+}
