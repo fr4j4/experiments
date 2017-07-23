@@ -9,9 +9,35 @@
 	<canvas id="game_canvas">
 		
 	</canvas>
+	<br>
+	<div>	
+		<p>rate
+		<input id="rate_slider" type="range" name="points" min="100" max="500">
+		<button id="pause_btn">Start</button>
+		</p>
+	</div>
 </body>
 <script type="text/javascript">
 	init("game_canvas");
 	//start();
+	$("#rate_slider").on("change",function(){
+		step_rate=$(this).val();
+		//console.log(step_rate);
+	})
+
+	$("#pause_btn").click(function(){
+		if(first){
+			start();
+			$(this).text("pause");
+		}else{
+			running=!running;
+			if(running){
+				$(this).text("pause");
+			}else{
+				$(this).text("resume");
+			}
+		}
+	})
+
 </script>
 </html>

@@ -1,9 +1,11 @@
 var canvas;
-var rows= 50,cols=50;
-var block_size=8;//pixels of a block
+var rows= 30,cols=50;
+var block_size=15;//pixels of a block
 var block_border=1;
 var cells=[];
-
+var step_rate=100;
+var running=false;
+var first=true;
 
 function getMousePos(canvas, evt) {
     var rect = canvas[0].getBoundingClientRect();
@@ -67,12 +69,21 @@ function init(canvas_id){
 		selectCell(coords.r,coords.c);
 	}, false);
 */
-	setInterval(draw,10);
+	setInterval(draw,100);
 }
 
 function start(){
-	time=1000/60;
-	setInterval(step,250);
+	if(first){
+		running=true;
+		first=false;
+	}
+	//console.log("loop");
+	//time=1000/60;
+	if(running){
+		step();
+	}
+	setTimeout(start,step_rate);
+	//setInterval(step,step_rate);
 	
 }
 
@@ -87,6 +98,7 @@ function clear(){
 }
 
 function step(){
+	//console.log("step");
 	for(i in cells){
 		c=(i)%cols;
 		r=Math.trunc(i/cols);
