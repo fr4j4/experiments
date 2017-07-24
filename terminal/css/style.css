@@ -3,6 +3,7 @@ html{
 }
 body{
 	background-color: #28097A;
+	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
 }
 html, body{
     margin: 0;
@@ -52,15 +53,23 @@ html, body{
 
 }
 
+.tab.active{
+	background-color: black !important;
+}
+
+.tab.inactive{
+	background-color: gray !important;
+}
+
 .terminal >.tabs >.tab >.close_tab{
 	cursor: pointer;
 }
 
-.terminal > .content > .text > p{
+.content > .text > p{
 	margin: 0.0625em;
 }
 
-.terminal > .content{
+.content{
 	overflow-y: auto;
 	position: absolute;
 	background-color: black;

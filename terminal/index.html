@@ -11,18 +11,24 @@
 <div class="terminal">
 	<div class="title">Terminal</div>
 	<div class="tabs">
-		<div class="tab">tab#1 <span class="close_tab">[x]</span></div>
-		<div class="tab">tab#2 <span class="close_tab">[x]</span></div>
-		<div class="tab">tab#3 <span class="close_tab">[x]</span></div>
+		<button id="tab_tab1" class="tab active"   onclick="showTab('tab1')">tab#1 [x]</button>
+		<button id="tab_tab2" class="tab inactive" onclick="showTab('tab2')">tab#2 [x]</button>
+		<button id="tab_tab3" class="tab inactive" onclick="showTab('tab3')">tab#3 [x]</button>
 	</div>
-	<div class="content">
-		<div class="text">
-			<p>updating packages...</p>
-			<p>done!</p>		
-		</div>
-		<div class="prompt"></div>
+
+	<div id="tab1" class="content">
+		TAB 1 content
+	</div>
+	<div id="tab2" style="display: none" class="content">
+		TAB 2 content
+	</div>
+	<div id="tab3" style="display: none" class="content">
+		TAB 3 content
 	</div>
 </div>
+
+
+
 
 <script type="text/javascript">
 	$(document).ready(function(){
